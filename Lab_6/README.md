@@ -1,4 +1,4 @@
-#
+##
 # Lab 6 : 6 : Installation d'AGIC, déploiement d'Azure Application Gateway et déploiement d'une application basique
 #
       
@@ -35,7 +35,7 @@ Dans ce lab, pour des raisons de simplicité, l'option _Greenfield_ est retenue.
 
 ## Pré-requis sur le poste d'administration
 - Un abonnement Azure avec les privilèges d'administration (idéalement owner)
-- Azure CLI 2.37 or >: [https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) 
+- Azure CLI 2.37 or >: [https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) 
 - kubectl 
 
 Les opérations sont réalisables depuis l'Azure Cloud Shell : https://shell.azure.com 
@@ -148,6 +148,10 @@ Les services frontend, redis-master et redis-replica ne doivent pas avoir d'adre
 
 ```bash
 kubectl get ingress -n default
+```
+
+```
+wget https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/all-in-one/ing-guestbook.yaml
 ```
 
 Visualiser le contenu du fichier ing-guestbook.yaml puis appliquer ce fichier
